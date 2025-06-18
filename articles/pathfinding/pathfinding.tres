@@ -1,0 +1,40 @@
+[gd_resource type="Resource" script_class="Article" load_steps=8 format=3 uid="uid://rdb00d0paqxb"]
+
+[ext_resource type="Script" uid="uid://c2adv8hit55bg" path="res://resources/content.gd" id="1_qbcin"]
+[ext_resource type="Script" uid="uid://coau8k662cayh" path="res://resources/richTextContent.gd" id="2_tvrxt"]
+[ext_resource type="Script" uid="uid://bw4cbysroc2t" path="res://resources/horizontalLineContent.gd" id="3_ap1la"]
+[ext_resource type="Script" uid="uid://fnogmfgtmm1f" path="res://resources/article.gd" id="4_t6ot8"]
+
+[sub_resource type="Resource" id="Resource_2lru5"]
+script = ExtResource("2_tvrxt")
+selection_enabled = false
+text = "[font_size=30][center]What code is like[/center][/font_size]"
+metadata/_custom_type_script = "uid://coau8k662cayh"
+
+[sub_resource type="Resource" id="Resource_y1f3r"]
+script = ExtResource("3_ap1la")
+thickness = 4.0
+width = 0.6
+color = Color(0.355314, 0.355314, 0.355314, 1)
+metadata/_custom_type_script = "uid://bw4cbysroc2t"
+
+[sub_resource type="Resource" id="Resource_mxqir"]
+script = ExtResource("2_tvrxt")
+selection_enabled = true
+text = "Learning to program can be daunting
+
+Yet, you want to make video games, so [b]there is no way around learning to program.[/b] Every video game is a computer program
+
+Learning to program can be daunting—there’s no denying that. At first, it may feel like you're trying to learn a new language, complete with strange symbols, rigid rules, and concepts that don’t seem to make sense. It's easy to feel overwhelmed, especially when you see how complex some video games can get. But if your dream is to make video games, there’s no way around it—programming is the foundation. Every video game, no matter how simple or advanced, is a computer program at its core.
+
+Games are built from lines of code that control everything: how characters move, how enemies behave, how the world reacts to your actions, and how the story unfolds. Without code, a game is just a collection of images and sounds with no life or logic behind them. Programming is what ties all the pieces together and makes them interactive. It gives your ideas form and function.
+
+The good news? You don’t need to master everything at once. You can start small. Many successful developers began by creating very simple projects—text-based games, 2D platformers, or puzzle games. With each line of code, you’ll start to build not just your game, but also your confidence. And unlike some other creative fields, game development offers immediate feedback: when you write code and run your game, you can see your creation come to life right away.
+
+So yes, programming might seem intimidating at first, but it’s also empowering. Once you start to grasp it, you’ll realize that it’s one of the most creative and flexible tools you can learn. If you're passionate about making games, programming is not a barrier—it’s a gateway."
+metadata/_custom_type_script = "uid://coau8k662cayh"
+
+[resource]
+script = ExtResource("4_t6ot8")
+contents = Array[ExtResource("1_qbcin")]([SubResource("Resource_2lru5"), SubResource("Resource_y1f3r"), SubResource("Resource_mxqir")])
+metadata/_custom_type_script = "uid://fnogmfgtmm1f"

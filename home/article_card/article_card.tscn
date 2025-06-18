@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://1nvh1p6v3eim"]
+
+[ext_resource type="Script" uid="uid://j1wagdxkhkpp" path="res://home/article_card/article_card.gd" id="1_ogv5l"]
+[ext_resource type="Texture2D" uid="uid://bphfuskytc61d" path="res://icon.svg" id="2_j5apl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ogv5l"]
+
+[node name="article_card" type="PanelContainer"]
+clip_children = 2
+custom_minimum_size = Vector2(150, 250)
+offset_right = 250.0
+offset_bottom = 400.0
+pivot_offset = Vector2(150, 250)
+script = ExtResource("1_ogv5l")
+
+[node name="click_detection" type="Button" parent="."]
+layout_mode = 2
+mouse_filter = 1
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ogv5l")
+
+[node name="VBoxCard" type="VBoxContainer" parent="."]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="texture" type="TextureRect" parent="VBoxCard"]
+layout_mode = 2
+mouse_filter = 2
+texture = ExtResource("2_j5apl")
+expand_mode = 4
+stretch_mode = 6
+
+[node name="Label" type="Label" parent="VBoxCard"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 0
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="pressed" from="click_detection" to="." method="_on_click_detection_pressed"]
