@@ -1,0 +1,73 @@
+[gd_scene load_steps=2 format=3 uid="uid://qsmhme16eonu"]
+
+[ext_resource type="Script" uid="uid://cdy527655nh6b" path="res://home/home.gd" id="1_eg57e"]
+
+[node name="home" type="CanvasLayer"]
+script = ExtResource("1_eg57e")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Header" type="MarginContainer" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="ColorRect" type="ColorRect" parent="Control/VBoxContainer/Header"]
+show_behind_parent = true
+layout_mode = 2
+color = Color(0.2, 0.203922, 0.27451, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/VBoxContainer/Header"]
+layout_mode = 2
+
+[node name="Title" type="Label" parent="Control/VBoxContainer/Header/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 61
+text = "Imagine game dev"
+horizontal_alignment = 1
+
+[node name="Author" type="Label" parent="Control/VBoxContainer/Header/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.721569, 0.811765, 0.807843, 1)
+theme_override_font_sizes/font_size = 30
+text = "from salodo"
+horizontal_alignment = 1
+
+[node name="Control" type="Control" parent="Control/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MarginContainer" type="MarginContainer" parent="Control/VBoxContainer/Control"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.08
+anchor_right = 0.88
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="lessons" type="ScrollContainer" parent="Control/VBoxContainer/Control/MarginContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+horizontal_scroll_mode = 0
+
+[node name="ArticleContainer" type="HFlowContainer" parent="Control/VBoxContainer/Control/MarginContainer/lessons"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 20
+alignment = 1
+metadata/_edit_use_anchors_ = true

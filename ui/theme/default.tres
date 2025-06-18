@@ -1,0 +1,24 @@
+[gd_resource type="Theme" load_steps=6 format=3 uid="uid://ea2ea4a1jbqv"]
+
+[ext_resource type="FontFile" uid="uid://c8rp7qqxvm8ao" path="res://ui/theme/font/Inter_18pt-Black.ttf" id="1_o1gij"]
+[ext_resource type="FontFile" uid="uid://ybojhhabak7l" path="res://ui/theme/font/Inter_18pt-BlackBold.ttf" id="1_urirx"]
+[ext_resource type="FontFile" uid="uid://dse1iy12ghjip" path="res://ui/theme/font/Inter_18pt-BoldItalic.ttf" id="2_dwoki"]
+[ext_resource type="FontFile" uid="uid://bu75wwv8tbo1w" path="res://ui/theme/font/Inter_18pt-BlackItalic.ttf" id="3_grp8e"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_urirx"]
+bg_color = Color(0.2, 0.203922, 0.27451, 1)
+border_width_bottom = 10
+border_color = Color(0.0972437, 0.0995944, 0.142481, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[resource]
+default_font = ExtResource("1_o1gij")
+default_font_size = 0
+Label/colors/font_color = Color(0.917647, 0.937255, 0.937255, 1)
+PanelContainer/styles/panel = SubResource("StyleBoxFlat_urirx")
+RichTextLabel/fonts/bold_font = ExtResource("1_urirx")
+RichTextLabel/fonts/bold_italics_font = ExtResource("2_dwoki")
+RichTextLabel/fonts/italics_font = ExtResource("3_grp8e")

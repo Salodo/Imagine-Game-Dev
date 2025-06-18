@@ -1,0 +1,37 @@
+[gd_scene load_steps=4 format=3 uid="uid://1nvh1p6v3eim"]
+
+[ext_resource type="Shader" uid="uid://drtyd7b2lvhqk" path="res://home/article_card/card_hover.gdshader" id="1_j5apl"]
+[ext_resource type="Script" uid="uid://j1wagdxkhkpp" path="res://home/article_card/article_card.gd" id="1_ogv5l"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_8n08n"]
+shader = ExtResource("1_j5apl")
+shader_parameter/mouse_screen_pos = Vector2(0, 0)
+shader_parameter/hovering = 0.0
+shader_parameter/screen_scale = 1.0
+
+[node name="article_card" type="PanelContainer" node_paths=PackedStringArray("normal")]
+clip_children = 2
+material = SubResource("ShaderMaterial_8n08n")
+custom_minimum_size = Vector2(300, 500)
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_ogv5l")
+normal = NodePath("marker")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="ColorRect" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 300)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 0
+text = "Introduction to A* and implementation guide
+Also: Dijkstra’s Algorithm, Breadth First Search"
+horizontal_alignment = 1
+autowrap_mode = 3
+
+[node name="marker" type="Marker2D" parent="."]
+position = Vector2(155, 215)
